@@ -1,0 +1,2370 @@
+{
+  "_": {
+    "postman_id": "c8c912ac-a075-41ec-a39f-b94833186c05"
+  },
+  "item": [
+    {
+      "id": "6511403f-3f7f-4be4-8832-9cbb365b6864",
+      "name": "user",
+      "item": [
+        {
+          "id": "fc4b70ab-b616-4b9a-a33d-2492695503d1",
+          "name": "auth",
+          "item": [
+            {
+              "id": "c19eb44a-ab2c-429c-93e7-fa6e3a4b981a",
+              "name": "register-device-token",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/user/auth/register-device-token",
+                  "path": [
+                    "v1",
+                    "user",
+                    "auth",
+                    "register-device-token"
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{authToken}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"deviceToken\":\"abcd123\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "_": {
+                    "postman_previewlanguage": "json"
+                  },
+                  "id": "2364702c-c942-4243-bd92-2567928b5bf5",
+                  "name": "register-device-token Failed",
+                  "originalRequest": {
+                    "url": {
+                      "raw": "{{base-url}}/v1/user/auth/register-device-token",
+                      "path": [
+                        "v1",
+                        "user",
+                        "auth",
+                        "register-device-token"
+                      ],
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}"
+                      }
+                    ],
+                    "method": "POST",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"deviceToken\":\"abcd123\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 400,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "246"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Mon, 09 Aug 2021 04:34:05 GMT"
+                    },
+                    {
+                      "key": "x-amzn-RequestId",
+                      "value": "d3b715f8-fb69-48d8-beec-396b041570c1"
+                    },
+                    {
+                      "key": "referrer-policy",
+                      "value": "no-referrer"
+                    },
+                    {
+                      "key": "x-dns-prefetch-control",
+                      "value": "off"
+                    },
+                    {
+                      "key": "x-permitted-cross-domain-policies",
+                      "value": "none"
+                    },
+                    {
+                      "key": "x-xss-protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "access-control-allow-origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "expect-ct",
+                      "value": "max-age=0"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=15552000; includeSubDomains"
+                    },
+                    {
+                      "key": "x-frame-options",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "x-amzn-Remapped-content-length",
+                      "value": "246"
+                    },
+                    {
+                      "key": "content-security-policy",
+                      "value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                    },
+                    {
+                      "key": "x-download-options",
+                      "value": "noopen"
+                    },
+                    {
+                      "key": "x-amz-apigw-id",
+                      "value": "DyB5mETaoAMFyyw="
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Accept-Encoding"
+                    },
+                    {
+                      "key": "x-content-type-options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "etag",
+                      "value": "W/\"f6-SZkDl6luoYcOoQxccj9OT4/eKKE\""
+                    },
+                    {
+                      "key": "X-Amzn-Trace-Id",
+                      "value": "Root=1-6110b03d-7afdba2b6b75c1955314ad62;Sampled=0"
+                    },
+                    {
+                      "key": "X-Cache",
+                      "value": "Error from cloudfront"
+                    },
+                    {
+                      "key": "Via",
+                      "value": "1.1 e01af42be70425366a2b20a3b825d2be.cloudfront.net (CloudFront)"
+                    },
+                    {
+                      "key": "X-Amz-Cf-Pop",
+                      "value": "BOM51-C1"
+                    },
+                    {
+                      "key": "X-Amz-Cf-Id",
+                      "value": "dYNPQK9EpeQSJMvrCkUtb7E-iqU0QIURCOf49KPKuCZEEl9rlZxumw=="
+                    }
+                  ],
+                  "body": "{\n    \"status\": \"Failure\",\n    \"code\": 401,\n    \"message\": \"Please authenticate\",\n    \"stack\": \"Error: Please authenticate\\n    at _callee$ (/Users/macos/projects/notificationTest/middlewares/auth.js:6:19)\\n    at tryCatch (/Users/macos/projects/notificationTest/middlewares/auth.js:13:2404)\\n    at Generator._invoke (/Users/macos/projects/notificationTest/middlewares/auth.js:13:1964)\\n    at Generator.next (/Users/macos/projects/notificationTest/middlewares/auth.js:13:3255)\\n    at asyncGeneratorStep (/Users/macos/projects/notificationTest/middlewares/auth.js:15:103)\\n    at _next (/Users/macos/projects/notificationTest/middlewares/auth.js:17:194)\\n    at /Users/macos/projects/notificationTest/middlewares/auth.js:17:364\\n    at new Promise (<anonymous>)\\n    at /Users/macos/projects/notificationTest/middlewares/auth.js:17:97\\n    at /Users/macos/projects/notificationTest/middlewares/auth.js:4:24\\n    at allFailed (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:107:18)\\n    at attempt (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:180:28)\\n    at JwtStrategy.strategy.fail (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:302:9)\\n    at JwtStrategy.authenticate (/Users/macos/projects/notificationTest/node_modules/passport-jwt/lib/strategy.js:96:21)\\n    at attempt (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:366:16)\\n    at authenticate (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:367:7)\"\n}",
+                  "cookie": []
+                },
+                {
+                  "_": {
+                    "postman_previewlanguage": "json"
+                  },
+                  "id": "fd684c5f-3248-4ef2-acb8-477d3d8fa643",
+                  "name": "register-device-token Success",
+                  "originalRequest": {
+                    "url": {
+                      "raw": "{{base-url}}/v1/user/auth/register-device-token",
+                      "path": [
+                        "v1",
+                        "user",
+                        "auth",
+                        "register-device-token"
+                      ],
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}"
+                      }
+                    ],
+                    "method": "POST",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"deviceToken\":\"abcd123\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "1727"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Mon, 09 Aug 2021 04:33:47 GMT"
+                    },
+                    {
+                      "key": "x-amzn-RequestId",
+                      "value": "ac556d85-b79c-4c76-af92-4939dd0b6b7f"
+                    },
+                    {
+                      "key": "referrer-policy",
+                      "value": "no-referrer"
+                    },
+                    {
+                      "key": "x-dns-prefetch-control",
+                      "value": "off"
+                    },
+                    {
+                      "key": "x-permitted-cross-domain-policies",
+                      "value": "none"
+                    },
+                    {
+                      "key": "x-xss-protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "access-control-allow-origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "expect-ct",
+                      "value": "max-age=0"
+                    },
+                    {
+                      "key": "content-encoding",
+                      "value": "gzip"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=15552000; includeSubDomains"
+                    },
+                    {
+                      "key": "x-frame-options",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "content-security-policy",
+                      "value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                    },
+                    {
+                      "key": "x-download-options",
+                      "value": "noopen"
+                    },
+                    {
+                      "key": "x-amz-apigw-id",
+                      "value": "DyB2wGMXoAMFyVg="
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Accept-Encoding"
+                    },
+                    {
+                      "key": "x-content-type-options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "etag",
+                      "value": "W/\"1525-KvJsYaaD3NGLDWTF/UjaXp9ITSo\""
+                    },
+                    {
+                      "key": "X-Amzn-Trace-Id",
+                      "value": "Root=1-6110b02b-34b93ad02edc751736afdca9;Sampled=0"
+                    },
+                    {
+                      "key": "X-Cache",
+                      "value": "Miss from cloudfront"
+                    },
+                    {
+                      "key": "Via",
+                      "value": "1.1 e01af42be70425366a2b20a3b825d2be.cloudfront.net (CloudFront)"
+                    },
+                    {
+                      "key": "X-Amz-Cf-Pop",
+                      "value": "BOM51-C1"
+                    },
+                    {
+                      "key": "X-Amz-Cf-Id",
+                      "value": "45gl6x0hhqPxXNoDI71_2-6P882xa17K5DrhxvxH-cFwOkRdY-82Cg=="
+                    }
+                  ],
+                  "body": "{\n    \"status\": \"Success\",\n    \"data\": {\n        \"name\": \"brandsWeLove\",\n        \"email\": \"test@yopmail.com\",\n        \"codes\": [],\n        \"deviceTokens\": [\n            {\n                \"_id\": \"632841ca8a7d165589aaf9b0\",\n                \"deviceToken\": \"abcd123\"\n            },\n            {\n                \"_id\": \"632845e38a7d165589aaf9b7\",\n                \"deviceToken\": \"abcd1234\"\n            }\n        ],\n        \"id\": \"632841b649310a5524fed88e\"\n    }\n}",
+                  "cookie": []
+                }
+              ],
+              "event": []
+            },
+            {
+              "id": "181ccb92-2cde-4204-a65a-e01824b0d6a0",
+              "name": "Google Login API",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/user/auth/google",
+                  "path": [
+                    "v1",
+                    "user",
+                    "auth",
+                    "google"
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"access_token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjFiZjhhODRkM2VjZDc3ZTlmMmFkNWYwNmZmZDI2MDcwMWRkMDZkOTAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxMDQxNjI0OTc4MjIwLW9yN28zYTBsMm9nMmFwajgwbmJmYTJwbDE0amgxcW9yLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiMTA0MTYyNDk3ODIyMC1zbGhpcGdmMDQ5ZmNjNDd0dG11MmY3dHFhYWNlbDN0ZC5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExNDk5MTY4ODU3ODMwMzA1OTkwMyIsImVtYWlsIjoic2FoaWxyMDIxNkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IlNhaGlsIFJhdmFsIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBVFhBSnlwZ0tieXJTRzJCcS1ZdVotbkFDY21aenVSVVpSUTZvemtNNmlKPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlNhaGlsIiwiZmFtaWx5X25hbWUiOiJSYXZhbCIsImxvY2FsZSI6ImVuLUdCIiwiaWF0IjoxNjI2MzM5NjgwLCJleHAiOjE2MjYzNDMyODB9.THio-PVSgh777CwdtPDANGfZcZYOkDMKXvNkBxjLVIdf1JjRwbO6OanNUMC5xelMbupuElLWdxGnnWwtjfnAuZBn3Q0P6ab-NVSC-IV2b9pQypCj_hDfGypghCuHfPXEhF7hMpDjTEdbHtIEQ-ZGje--fPAddgXznx9aLtyB5uqSxyqRsZvWfWR5DN5bRfA1kph07pXQuIGVzRgfRC_GWaeZrGDu_LQZ70DgHCusSt2v41bEPBtafJT3rf7ArDRI5RUMWIWnSYG475nLhuQFUgzLD_L3zcuLHDJ_BIcQ5reo7_u-NJ0CwVyNIb6UAkUauo1KZMp-tEntJ7kVlXod_g\"\n}"
+                }
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ab20ee93-5d2e-408d-928b-f3512fca74d8",
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.collectionVariables.set(\"authToken\", pm.response.json().data?.tokens.access.token);"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "event": []
+        },
+        {
+          "id": "00a4ee7c-ae10-447b-964a-27b3c55c93e3",
+          "name": "User",
+          "item": [
+            {
+              "id": "24b92614-441c-4312-bf27-7358318a27ed",
+              "name": "getUserById",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/user/user/:userId",
+                  "path": [
+                    "v1",
+                    "user",
+                    "user",
+                    ":userId"
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "type": "any",
+                      "key": "userId"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "id": "79d18ce7-db12-436b-b552-9dc614b1dfd1",
+                  "name": "404 response",
+                  "status": "Not Found",
+                  "code": "404",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"code\":\"404\",\"message\":\"no route found\",\"stack\":\"\"}",
+                  "cookie": []
+                },
+                {
+                  "id": "ca1ecb63-a54e-4021-b52f-050076b71fe1",
+                  "name": "success response",
+                  "originalRequest": {
+                    "url": {
+                      "raw": "{{base-url}}/v1/user/user/:userId",
+                      "path": [
+                        "v1",
+                        "user",
+                        "user",
+                        ":userId"
+                      ],
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "type": "any",
+                          "key": "userId"
+                        }
+                      ]
+                    },
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "cache-control",
+                        "value": "no-cache"
+                      }
+                    ],
+                    "method": "GET",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": "200",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\",\"id\":\"65e42168d5da2b2607582603\"}",
+                  "cookie": []
+                }
+              ],
+              "event": []
+            },
+            {
+              "id": "832ed86c-7d13-4727-86d1-61aa15a16a0b",
+              "name": "createUser",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/user/user/",
+                  "path": [
+                    "v1",
+                    "user",
+                    "user",
+                    ""
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "id": "c1b88335-244d-4b8f-b0ad-7eca6688c203",
+                  "name": "404 response",
+                  "status": "Not Found",
+                  "code": "404",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"code\":\"404\",\"message\":\"no route found\",\"stack\":\"\"}",
+                  "cookie": []
+                },
+                {
+                  "id": "757a9495-b18e-4097-b034-fb07f9d5206e",
+                  "name": "success response",
+                  "originalRequest": {
+                    "url": {
+                      "raw": "{{base-url}}/v1/user/user/",
+                      "path": [
+                        "v1",
+                        "user",
+                        "user",
+                        ""
+                      ],
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "cache-control",
+                        "value": "no-cache"
+                      }
+                    ],
+                    "method": "POST",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": "200",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\",\"id\":\"65e42168d5da2b2607582604\"}",
+                  "cookie": []
+                }
+              ],
+              "event": []
+            },
+            {
+              "id": "53f57c0f-f1b5-4ad0-92fd-889ce6df4854",
+              "name": "getUser",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/user/user/",
+                  "path": [
+                    "v1",
+                    "user",
+                    "user",
+                    ""
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "id": "06a94133-e342-4cd1-8e6e-c41dddc615f1",
+                  "name": "404 response",
+                  "status": "Not Found",
+                  "code": "404",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"code\":\"404\",\"message\":\"no route found\",\"stack\":\"\"}",
+                  "cookie": []
+                },
+                {
+                  "id": "462306ec-9964-4c36-99cd-775ce0ff9b03",
+                  "name": "success response",
+                  "originalRequest": {
+                    "url": {
+                      "raw": "{{base-url}}/v1/user/user/",
+                      "path": [
+                        "v1",
+                        "user",
+                        "user",
+                        ""
+                      ],
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "cache-control",
+                        "value": "no-cache"
+                      }
+                    ],
+                    "method": "GET",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": "200",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\",\"id\":\"65e42168d5da2b2607582605\"}",
+                  "cookie": []
+                }
+              ],
+              "event": []
+            },
+            {
+              "id": "b07a03f9-f0fb-4d4e-b1c9-24b35dcf729e",
+              "name": "updateUser",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/user/user/:userId",
+                  "path": [
+                    "v1",
+                    "user",
+                    "user",
+                    ":userId"
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "type": "any",
+                      "key": "userId"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "id": "8eda2f47-fb32-4945-b560-de6c37ca21cf",
+                  "name": "404 response",
+                  "status": "Not Found",
+                  "code": "404",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"code\":\"404\",\"message\":\"no route found\",\"stack\":\"\"}",
+                  "cookie": []
+                },
+                {
+                  "id": "f1c05310-2b31-4d95-b651-d942b127c4a4",
+                  "name": "success response",
+                  "originalRequest": {
+                    "url": {
+                      "raw": "{{base-url}}/v1/user/user/:userId",
+                      "path": [
+                        "v1",
+                        "user",
+                        "user",
+                        ":userId"
+                      ],
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "type": "any",
+                          "key": "userId"
+                        }
+                      ]
+                    },
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "cache-control",
+                        "value": "no-cache"
+                      }
+                    ],
+                    "method": "PUT",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": "200",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\",\"id\":\"65e42168d5da2b2607582606\"}",
+                  "cookie": []
+                }
+              ],
+              "event": []
+            },
+            {
+              "id": "5d4b8065-4951-451c-928a-2b95b241d4a2",
+              "name": "deleteUserById",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/user/user/:userId",
+                  "path": [
+                    "v1",
+                    "user",
+                    "user",
+                    ":userId"
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "type": "any",
+                      "key": "userId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{authToken}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "cache-control",
+                    "value": "no-cache"
+                  }
+                ],
+                "method": "DELETE"
+              },
+              "response": [
+                {
+                  "id": "15174c11-5ab6-421c-a6bc-7d3d13bd1b35",
+                  "name": "404 response",
+                  "status": "Not Found",
+                  "code": "404",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"code\":\"404\",\"message\":\"no route found\",\"stack\":\"\"}",
+                  "cookie": []
+                }
+              ],
+              "event": []
+            },
+            {
+              "id": "32c702fd-1fd0-4943-9ae3-cebca8f6607c",
+              "name": "getUserPaginated",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/user/user/paginated",
+                  "path": [
+                    "v1",
+                    "user",
+                    "user",
+                    "paginated"
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "id": "f98eaac6-cd53-486e-a4d5-a10c45c4b653",
+                  "name": "404 response",
+                  "status": "Not Found",
+                  "code": "404",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"code\":\"404\",\"message\":\"no route found\",\"stack\":\"\"}",
+                  "cookie": []
+                },
+                {
+                  "id": "73eba21c-34c4-4d71-9993-17d372da7ed8",
+                  "name": "success response",
+                  "originalRequest": {
+                    "url": {
+                      "raw": "{{base-url}}/v1/user/user/paginated",
+                      "path": [
+                        "v1",
+                        "user",
+                        "user",
+                        "paginated"
+                      ],
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "cache-control",
+                        "value": "no-cache"
+                      }
+                    ],
+                    "method": "GET",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": "200",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\",\"id\":\"65e42168d5da2b2607582607\"}",
+                  "cookie": []
+                }
+              ],
+              "event": []
+            }
+          ],
+          "event": []
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "5dac843c-c77f-45e8-856e-1f6ba80bf0e9",
+      "name": "admin",
+      "item": [
+        {
+          "id": "6eb941df-5363-41c1-b24f-7894b95b2193",
+          "name": "auth",
+          "item": [
+            {
+              "id": "4a533835-506b-4b84-a912-ac46cb7bc5dc",
+              "name": "register-device-token",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/admin/auth/register-device-token",
+                  "path": [
+                    "v1",
+                    "admin",
+                    "auth",
+                    "register-device-token"
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{authToken}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"deviceToken\":\"abcd123\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "_": {
+                    "postman_previewlanguage": "json"
+                  },
+                  "id": "08dc8de0-8ca0-4b7c-9c3e-461e003cf784",
+                  "name": "register-device-token Failed",
+                  "originalRequest": {
+                    "url": {
+                      "raw": "{{base-url}}/v1/admin/auth/register-device-token",
+                      "path": [
+                        "v1",
+                        "admin",
+                        "auth",
+                        "register-device-token"
+                      ],
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}"
+                      }
+                    ],
+                    "method": "POST",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"deviceToken\":\"abcd123\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 400,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "246"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Mon, 09 Aug 2021 04:34:05 GMT"
+                    },
+                    {
+                      "key": "x-amzn-RequestId",
+                      "value": "d3b715f8-fb69-48d8-beec-396b041570c1"
+                    },
+                    {
+                      "key": "referrer-policy",
+                      "value": "no-referrer"
+                    },
+                    {
+                      "key": "x-dns-prefetch-control",
+                      "value": "off"
+                    },
+                    {
+                      "key": "x-permitted-cross-domain-policies",
+                      "value": "none"
+                    },
+                    {
+                      "key": "x-xss-protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "access-control-allow-origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "expect-ct",
+                      "value": "max-age=0"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=15552000; includeSubDomains"
+                    },
+                    {
+                      "key": "x-frame-options",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "x-amzn-Remapped-content-length",
+                      "value": "246"
+                    },
+                    {
+                      "key": "content-security-policy",
+                      "value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                    },
+                    {
+                      "key": "x-download-options",
+                      "value": "noopen"
+                    },
+                    {
+                      "key": "x-amz-apigw-id",
+                      "value": "DyB5mETaoAMFyyw="
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Accept-Encoding"
+                    },
+                    {
+                      "key": "x-content-type-options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "etag",
+                      "value": "W/\"f6-SZkDl6luoYcOoQxccj9OT4/eKKE\""
+                    },
+                    {
+                      "key": "X-Amzn-Trace-Id",
+                      "value": "Root=1-6110b03d-7afdba2b6b75c1955314ad62;Sampled=0"
+                    },
+                    {
+                      "key": "X-Cache",
+                      "value": "Error from cloudfront"
+                    },
+                    {
+                      "key": "Via",
+                      "value": "1.1 e01af42be70425366a2b20a3b825d2be.cloudfront.net (CloudFront)"
+                    },
+                    {
+                      "key": "X-Amz-Cf-Pop",
+                      "value": "BOM51-C1"
+                    },
+                    {
+                      "key": "X-Amz-Cf-Id",
+                      "value": "dYNPQK9EpeQSJMvrCkUtb7E-iqU0QIURCOf49KPKuCZEEl9rlZxumw=="
+                    }
+                  ],
+                  "body": "{\n    \"status\": \"Failure\",\n    \"code\": 401,\n    \"message\": \"Please authenticate\",\n    \"stack\": \"Error: Please authenticate\\n    at _callee$ (/Users/macos/projects/notificationTest/middlewares/auth.js:6:19)\\n    at tryCatch (/Users/macos/projects/notificationTest/middlewares/auth.js:13:2404)\\n    at Generator._invoke (/Users/macos/projects/notificationTest/middlewares/auth.js:13:1964)\\n    at Generator.next (/Users/macos/projects/notificationTest/middlewares/auth.js:13:3255)\\n    at asyncGeneratorStep (/Users/macos/projects/notificationTest/middlewares/auth.js:15:103)\\n    at _next (/Users/macos/projects/notificationTest/middlewares/auth.js:17:194)\\n    at /Users/macos/projects/notificationTest/middlewares/auth.js:17:364\\n    at new Promise (<anonymous>)\\n    at /Users/macos/projects/notificationTest/middlewares/auth.js:17:97\\n    at /Users/macos/projects/notificationTest/middlewares/auth.js:4:24\\n    at allFailed (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:107:18)\\n    at attempt (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:180:28)\\n    at JwtStrategy.strategy.fail (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:302:9)\\n    at JwtStrategy.authenticate (/Users/macos/projects/notificationTest/node_modules/passport-jwt/lib/strategy.js:96:21)\\n    at attempt (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:366:16)\\n    at authenticate (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:367:7)\"\n}",
+                  "cookie": []
+                },
+                {
+                  "_": {
+                    "postman_previewlanguage": "json"
+                  },
+                  "id": "7a1e4657-1b5f-4b36-9a85-d713507c2bd7",
+                  "name": "register-device-token Success",
+                  "originalRequest": {
+                    "url": {
+                      "raw": "{{base-url}}/v1/admin/auth/register-device-token",
+                      "path": [
+                        "v1",
+                        "admin",
+                        "auth",
+                        "register-device-token"
+                      ],
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}"
+                      }
+                    ],
+                    "method": "POST",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"deviceToken\":\"abcd123\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "1727"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Mon, 09 Aug 2021 04:33:47 GMT"
+                    },
+                    {
+                      "key": "x-amzn-RequestId",
+                      "value": "ac556d85-b79c-4c76-af92-4939dd0b6b7f"
+                    },
+                    {
+                      "key": "referrer-policy",
+                      "value": "no-referrer"
+                    },
+                    {
+                      "key": "x-dns-prefetch-control",
+                      "value": "off"
+                    },
+                    {
+                      "key": "x-permitted-cross-domain-policies",
+                      "value": "none"
+                    },
+                    {
+                      "key": "x-xss-protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "access-control-allow-origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "expect-ct",
+                      "value": "max-age=0"
+                    },
+                    {
+                      "key": "content-encoding",
+                      "value": "gzip"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=15552000; includeSubDomains"
+                    },
+                    {
+                      "key": "x-frame-options",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "content-security-policy",
+                      "value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                    },
+                    {
+                      "key": "x-download-options",
+                      "value": "noopen"
+                    },
+                    {
+                      "key": "x-amz-apigw-id",
+                      "value": "DyB2wGMXoAMFyVg="
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Accept-Encoding"
+                    },
+                    {
+                      "key": "x-content-type-options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "etag",
+                      "value": "W/\"1525-KvJsYaaD3NGLDWTF/UjaXp9ITSo\""
+                    },
+                    {
+                      "key": "X-Amzn-Trace-Id",
+                      "value": "Root=1-6110b02b-34b93ad02edc751736afdca9;Sampled=0"
+                    },
+                    {
+                      "key": "X-Cache",
+                      "value": "Miss from cloudfront"
+                    },
+                    {
+                      "key": "Via",
+                      "value": "1.1 e01af42be70425366a2b20a3b825d2be.cloudfront.net (CloudFront)"
+                    },
+                    {
+                      "key": "X-Amz-Cf-Pop",
+                      "value": "BOM51-C1"
+                    },
+                    {
+                      "key": "X-Amz-Cf-Id",
+                      "value": "45gl6x0hhqPxXNoDI71_2-6P882xa17K5DrhxvxH-cFwOkRdY-82Cg=="
+                    }
+                  ],
+                  "body": "{\n    \"status\": \"Success\",\n    \"data\": {\n        \"name\": \"brandsWeLove\",\n        \"email\": \"test@yopmail.com\",\n        \"codes\": [],\n        \"deviceTokens\": [\n            {\n                \"_id\": \"632841ca8a7d165589aaf9b0\",\n                \"deviceToken\": \"abcd123\"\n            },\n            {\n                \"_id\": \"632845e38a7d165589aaf9b7\",\n                \"deviceToken\": \"abcd1234\"\n            }\n        ],\n        \"id\": \"632841b649310a5524fed88e\"\n    }\n}",
+                  "cookie": []
+                }
+              ],
+              "event": []
+            },
+            {
+              "id": "6c1ec4ea-0494-4811-8121-5748f3763ee4",
+              "name": "Google Login API",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/admin/auth/google",
+                  "path": [
+                    "v1",
+                    "admin",
+                    "auth",
+                    "google"
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"access_token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjFiZjhhODRkM2VjZDc3ZTlmMmFkNWYwNmZmZDI2MDcwMWRkMDZkOTAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxMDQxNjI0OTc4MjIwLW9yN28zYTBsMm9nMmFwajgwbmJmYTJwbDE0amgxcW9yLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiMTA0MTYyNDk3ODIyMC1zbGhpcGdmMDQ5ZmNjNDd0dG11MmY3dHFhYWNlbDN0ZC5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExNDk5MTY4ODU3ODMwMzA1OTkwMyIsImVtYWlsIjoic2FoaWxyMDIxNkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IlNhaGlsIFJhdmFsIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBVFhBSnlwZ0tieXJTRzJCcS1ZdVotbkFDY21aenVSVVpSUTZvemtNNmlKPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlNhaGlsIiwiZmFtaWx5X25hbWUiOiJSYXZhbCIsImxvY2FsZSI6ImVuLUdCIiwiaWF0IjoxNjI2MzM5NjgwLCJleHAiOjE2MjYzNDMyODB9.THio-PVSgh777CwdtPDANGfZcZYOkDMKXvNkBxjLVIdf1JjRwbO6OanNUMC5xelMbupuElLWdxGnnWwtjfnAuZBn3Q0P6ab-NVSC-IV2b9pQypCj_hDfGypghCuHfPXEhF7hMpDjTEdbHtIEQ-ZGje--fPAddgXznx9aLtyB5uqSxyqRsZvWfWR5DN5bRfA1kph07pXQuIGVzRgfRC_GWaeZrGDu_LQZ70DgHCusSt2v41bEPBtafJT3rf7ArDRI5RUMWIWnSYG475nLhuQFUgzLD_L3zcuLHDJ_BIcQ5reo7_u-NJ0CwVyNIb6UAkUauo1KZMp-tEntJ7kVlXod_g\"\n}"
+                }
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "3a99effd-3316-4501-bfda-5a94e7b0117d",
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.collectionVariables.set(\"authToken\", pm.response.json().data?.tokens.access.token);"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "event": []
+        },
+        {
+          "id": "31049968-269f-4057-bce7-8fbfd343fc65",
+          "name": "User",
+          "item": [
+            {
+              "id": "24b92614-441c-4312-bf27-7358318a27ed",
+              "name": "getUserById",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/admin/user/:userId",
+                  "path": [
+                    "v1",
+                    "admin",
+                    "user",
+                    ":userId"
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "type": "any",
+                      "key": "userId"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "id": "79d18ce7-db12-436b-b552-9dc614b1dfd1",
+                  "name": "404 response",
+                  "status": "Not Found",
+                  "code": "404",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"code\":\"404\",\"message\":\"no route found\",\"stack\":\"\"}",
+                  "cookie": []
+                },
+                {
+                  "id": "ca1ecb63-a54e-4021-b52f-050076b71fe1",
+                  "name": "success response",
+                  "originalRequest": {
+                    "url": {
+                      "raw": "{{base-url}}/v1/admin/user/:userId",
+                      "path": [
+                        "v1",
+                        "admin",
+                        "user",
+                        ":userId"
+                      ],
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "type": "any",
+                          "key": "userId"
+                        }
+                      ]
+                    },
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "cache-control",
+                        "value": "no-cache"
+                      }
+                    ],
+                    "method": "GET",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": "200",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\",\"id\":\"65e42168d5da2b2607582603\"}",
+                  "cookie": []
+                }
+              ],
+              "event": []
+            },
+            {
+              "id": "832ed86c-7d13-4727-86d1-61aa15a16a0b",
+              "name": "createUser",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/admin/user/",
+                  "path": [
+                    "v1",
+                    "admin",
+                    "user",
+                    ""
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "id": "c1b88335-244d-4b8f-b0ad-7eca6688c203",
+                  "name": "404 response",
+                  "status": "Not Found",
+                  "code": "404",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"code\":\"404\",\"message\":\"no route found\",\"stack\":\"\"}",
+                  "cookie": []
+                },
+                {
+                  "id": "757a9495-b18e-4097-b034-fb07f9d5206e",
+                  "name": "success response",
+                  "originalRequest": {
+                    "url": {
+                      "raw": "{{base-url}}/v1/admin/user/",
+                      "path": [
+                        "v1",
+                        "admin",
+                        "user",
+                        ""
+                      ],
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "cache-control",
+                        "value": "no-cache"
+                      }
+                    ],
+                    "method": "POST",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": "200",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\",\"id\":\"65e42168d5da2b2607582604\"}",
+                  "cookie": []
+                }
+              ],
+              "event": []
+            },
+            {
+              "id": "53f57c0f-f1b5-4ad0-92fd-889ce6df4854",
+              "name": "getUser",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/admin/user/",
+                  "path": [
+                    "v1",
+                    "admin",
+                    "user",
+                    ""
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "id": "06a94133-e342-4cd1-8e6e-c41dddc615f1",
+                  "name": "404 response",
+                  "status": "Not Found",
+                  "code": "404",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"code\":\"404\",\"message\":\"no route found\",\"stack\":\"\"}",
+                  "cookie": []
+                },
+                {
+                  "id": "462306ec-9964-4c36-99cd-775ce0ff9b03",
+                  "name": "success response",
+                  "originalRequest": {
+                    "url": {
+                      "raw": "{{base-url}}/v1/admin/user/",
+                      "path": [
+                        "v1",
+                        "admin",
+                        "user",
+                        ""
+                      ],
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "cache-control",
+                        "value": "no-cache"
+                      }
+                    ],
+                    "method": "GET",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": "200",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\",\"id\":\"65e42168d5da2b2607582605\"}",
+                  "cookie": []
+                }
+              ],
+              "event": []
+            },
+            {
+              "id": "b07a03f9-f0fb-4d4e-b1c9-24b35dcf729e",
+              "name": "updateUser",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/admin/user/:userId",
+                  "path": [
+                    "v1",
+                    "admin",
+                    "user",
+                    ":userId"
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "type": "any",
+                      "key": "userId"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "id": "8eda2f47-fb32-4945-b560-de6c37ca21cf",
+                  "name": "404 response",
+                  "status": "Not Found",
+                  "code": "404",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"code\":\"404\",\"message\":\"no route found\",\"stack\":\"\"}",
+                  "cookie": []
+                },
+                {
+                  "id": "f1c05310-2b31-4d95-b651-d942b127c4a4",
+                  "name": "success response",
+                  "originalRequest": {
+                    "url": {
+                      "raw": "{{base-url}}/v1/admin/user/:userId",
+                      "path": [
+                        "v1",
+                        "admin",
+                        "user",
+                        ":userId"
+                      ],
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "type": "any",
+                          "key": "userId"
+                        }
+                      ]
+                    },
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "cache-control",
+                        "value": "no-cache"
+                      }
+                    ],
+                    "method": "PUT",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": "200",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\",\"id\":\"65e42168d5da2b2607582606\"}",
+                  "cookie": []
+                }
+              ],
+              "event": []
+            },
+            {
+              "id": "5d4b8065-4951-451c-928a-2b95b241d4a2",
+              "name": "deleteUserById",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/admin/user/:userId",
+                  "path": [
+                    "v1",
+                    "admin",
+                    "user",
+                    ":userId"
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "type": "any",
+                      "key": "userId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{authToken}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "cache-control",
+                    "value": "no-cache"
+                  }
+                ],
+                "method": "DELETE"
+              },
+              "response": [
+                {
+                  "id": "15174c11-5ab6-421c-a6bc-7d3d13bd1b35",
+                  "name": "404 response",
+                  "status": "Not Found",
+                  "code": "404",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"code\":\"404\",\"message\":\"no route found\",\"stack\":\"\"}",
+                  "cookie": []
+                }
+              ],
+              "event": []
+            },
+            {
+              "id": "32c702fd-1fd0-4943-9ae3-cebca8f6607c",
+              "name": "getUserPaginated",
+              "request": {
+                "url": {
+                  "raw": "{{base-url}}/v1/admin/user/paginated",
+                  "path": [
+                    "v1",
+                    "admin",
+                    "user",
+                    "paginated"
+                  ],
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": [
+                {
+                  "id": "f98eaac6-cd53-486e-a4d5-a10c45c4b653",
+                  "name": "404 response",
+                  "status": "Not Found",
+                  "code": "404",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"code\":\"404\",\"message\":\"no route found\",\"stack\":\"\"}",
+                  "cookie": []
+                },
+                {
+                  "id": "73eba21c-34c4-4d71-9993-17d372da7ed8",
+                  "name": "success response",
+                  "originalRequest": {
+                    "url": {
+                      "raw": "{{base-url}}/v1/admin/user/paginated",
+                      "path": [
+                        "v1",
+                        "admin",
+                        "user",
+                        "paginated"
+                      ],
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{authToken}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "cache-control",
+                        "value": "no-cache"
+                      }
+                    ],
+                    "method": "GET",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\"}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": "200",
+                  "header": [
+                    {
+                      "key": "Authorization",
+                      "value": "Bearer {{authToken}}"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache"
+                    }
+                  ],
+                  "body": "{\"name\":\"lorem\",\"role\":\"lorem\",\"googleProvider\":\"63bd04b2342fde7a69846a5a\",\"phone\":100,\"profile_picture\":\"lorem\",\"password\":\"lorem\",\"id\":\"65e42168d5da2b2607582607\"}",
+                  "cookie": []
+                }
+              ],
+              "event": []
+            }
+          ],
+          "event": []
+        }
+      ],
+      "event": []
+    },
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "Health check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base-url}}/health",
+              "host": [
+                "{{base-url}}"
+              ],
+              "path": [
+                "health"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Health check",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}/health",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "health"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "15"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"f-RQ8OySFd+KR+AvtJ7qImjtT0D/0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 20 Feb 2023 12:21:40 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"UP\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Metrics check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base-url}}/metrics",
+              "host": [
+                "{{base-url}}"
+              ],
+              "path": [
+                "metrics"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Metrics check",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}/metrics",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "metrics"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "132"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"84-BLyLMLazZzjsd/9k2NOD4pb9yoI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 20 Feb 2023 12:28:35 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"mem\": {\n        \"rss\": 73568256,\n        \"heapTotal\": 91303936,\n        \"heapUsed\": 87017248,\n        \"external\": 19915183,\n        \"arrayBuffers\": 18328199\n    },\n    \"uptime\": 170.688891044\n}"
+            }
+          ]
+        },
+        {
+          "name": "info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base-url}}/info",
+              "host": [
+                "{{base-url}}"
+              ],
+              "path": [
+                "info"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "info",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}/info",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "info"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "75"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4b-DlEW7PWR4kNRj1OGxGFAuGxS4Ck\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 20 Feb 2023 12:28:40 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"build\": {\n        \"name\": \"p1\",\n        \"description\": \"Generated Project\",\n        \"version\": \"1.0.0\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "id": "base-url",
+      "type": "string",
+      "value": "http://localhost:3000"
+    }
+  ],
+  "info": {
+    "_postman_id": "c8c912ac-a075-41ec-a39f-b94833186c05",
+    "name": "Testing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  }
+}

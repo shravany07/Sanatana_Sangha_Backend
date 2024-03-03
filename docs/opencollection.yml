@@ -1,0 +1,1380 @@
+openapi: 3.0.0
+info:
+  title: Testing
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: local
+tags:
+  - name: user
+  - name: user > auth
+  - name: user > User
+  - name: admin
+  - name: admin > auth
+  - name: admin > User
+  - name: Health
+paths:
+  /v1/user/auth/register-device-token:
+    post:
+      tags:
+        - user > auth
+      summary: register-device-token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                deviceToken: abcd123
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Bearer {{authToken}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '1727'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Date:
+              schema:
+                type: string
+                example: Mon, 09 Aug 2021 04:33:47 GMT
+            x-amzn-RequestId:
+              schema:
+                type: string
+                example: ac556d85-b79c-4c76-af92-4939dd0b6b7f
+            referrer-policy:
+              schema:
+                type: string
+                example: no-referrer
+            x-dns-prefetch-control:
+              schema:
+                type: string
+                example: 'off'
+            x-permitted-cross-domain-policies:
+              schema:
+                type: string
+                example: none
+            x-xss-protection:
+              schema:
+                type: integer
+                example: '0'
+            access-control-allow-origin:
+              schema:
+                type: string
+                example: '*'
+            expect-ct:
+              schema:
+                type: string
+                example: max-age=0
+            content-encoding:
+              schema:
+                type: string
+                example: gzip
+            strict-transport-security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            x-frame-options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            content-security-policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri
+                  'self';block-all-mixed-content;font-src 'self' https:
+                  data:;frame-ancestors 'self';img-src 'self' data:;object-src
+                  'none';script-src 'self';script-src-attr 'none';style-src
+                  'self' https: 'unsafe-inline';upgrade-insecure-requests
+            x-download-options:
+              schema:
+                type: string
+                example: noopen
+            x-amz-apigw-id:
+              schema:
+                type: string
+                example: DyB2wGMXoAMFyVg=
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            x-content-type-options:
+              schema:
+                type: string
+                example: nosniff
+            etag:
+              schema:
+                type: string
+                example: W/"1525-KvJsYaaD3NGLDWTF/UjaXp9ITSo"
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+                example: Root=1-6110b02b-34b93ad02edc751736afdca9;Sampled=0
+            X-Cache:
+              schema:
+                type: string
+                example: Miss from cloudfront
+            Via:
+              schema:
+                type: string
+                example: >-
+                  1.1 e01af42be70425366a2b20a3b825d2be.cloudfront.net
+                  (CloudFront)
+            X-Amz-Cf-Pop:
+              schema:
+                type: string
+                example: BOM51-C1
+            X-Amz-Cf-Id:
+              schema:
+                type: string
+                example: 45gl6x0hhqPxXNoDI71_2-6P882xa17K5DrhxvxH-cFwOkRdY-82Cg==
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: |-
+                {
+                    "status": "Success",
+                    "data": {
+                        "name": "brandsWeLove",
+                        "email": "test@yopmail.com",
+                        "codes": [],
+                        "deviceTokens": [
+                            {
+                                "_id": "632841ca8a7d165589aaf9b0",
+                                "deviceToken": "abcd123"
+                            },
+                            {
+                                "_id": "632845e38a7d165589aaf9b7",
+                                "deviceToken": "abcd1234"
+                            }
+                        ],
+                        "id": "632841b649310a5524fed88e"
+                    }
+                }
+        '400':
+          description: Unauthorized
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '246'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Date:
+              schema:
+                type: string
+                example: Mon, 09 Aug 2021 04:34:05 GMT
+            x-amzn-RequestId:
+              schema:
+                type: string
+                example: d3b715f8-fb69-48d8-beec-396b041570c1
+            referrer-policy:
+              schema:
+                type: string
+                example: no-referrer
+            x-dns-prefetch-control:
+              schema:
+                type: string
+                example: 'off'
+            x-permitted-cross-domain-policies:
+              schema:
+                type: string
+                example: none
+            x-xss-protection:
+              schema:
+                type: integer
+                example: '0'
+            access-control-allow-origin:
+              schema:
+                type: string
+                example: '*'
+            expect-ct:
+              schema:
+                type: string
+                example: max-age=0
+            strict-transport-security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            x-frame-options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            x-amzn-Remapped-content-length:
+              schema:
+                type: integer
+                example: '246'
+            content-security-policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri
+                  'self';block-all-mixed-content;font-src 'self' https:
+                  data:;frame-ancestors 'self';img-src 'self' data:;object-src
+                  'none';script-src 'self';script-src-attr 'none';style-src
+                  'self' https: 'unsafe-inline';upgrade-insecure-requests
+            x-download-options:
+              schema:
+                type: string
+                example: noopen
+            x-amz-apigw-id:
+              schema:
+                type: string
+                example: DyB5mETaoAMFyyw=
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            x-content-type-options:
+              schema:
+                type: string
+                example: nosniff
+            etag:
+              schema:
+                type: string
+                example: W/"f6-SZkDl6luoYcOoQxccj9OT4/eKKE"
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+                example: Root=1-6110b03d-7afdba2b6b75c1955314ad62;Sampled=0
+            X-Cache:
+              schema:
+                type: string
+                example: Error from cloudfront
+            Via:
+              schema:
+                type: string
+                example: >-
+                  1.1 e01af42be70425366a2b20a3b825d2be.cloudfront.net
+                  (CloudFront)
+            X-Amz-Cf-Pop:
+              schema:
+                type: string
+                example: BOM51-C1
+            X-Amz-Cf-Id:
+              schema:
+                type: string
+                example: dYNPQK9EpeQSJMvrCkUtb7E-iqU0QIURCOf49KPKuCZEEl9rlZxumw==
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: |-
+                {
+                    "status": "Failure",
+                    "code": 401,
+                    "message": "Please authenticate",
+                    "stack": "Error: Please authenticate\n    at _callee$ (/Users/macos/projects/notificationTest/middlewares/auth.js:6:19)\n    at tryCatch (/Users/macos/projects/notificationTest/middlewares/auth.js:13:2404)\n    at Generator._invoke (/Users/macos/projects/notificationTest/middlewares/auth.js:13:1964)\n    at Generator.next (/Users/macos/projects/notificationTest/middlewares/auth.js:13:3255)\n    at asyncGeneratorStep (/Users/macos/projects/notificationTest/middlewares/auth.js:15:103)\n    at _next (/Users/macos/projects/notificationTest/middlewares/auth.js:17:194)\n    at /Users/macos/projects/notificationTest/middlewares/auth.js:17:364\n    at new Promise (<anonymous>)\n    at /Users/macos/projects/notificationTest/middlewares/auth.js:17:97\n    at /Users/macos/projects/notificationTest/middlewares/auth.js:4:24\n    at allFailed (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:107:18)\n    at attempt (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:180:28)\n    at JwtStrategy.strategy.fail (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:302:9)\n    at JwtStrategy.authenticate (/Users/macos/projects/notificationTest/node_modules/passport-jwt/lib/strategy.js:96:21)\n    at attempt (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:366:16)\n    at authenticate (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:367:7)"
+                }
+  /v1/user/auth/google:
+    post:
+      tags:
+        - user > auth
+      summary: Google Login API
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              type: string
+              example: >-
+                "{\n\t\"access_token\":
+                \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjFiZjhhODRkM2VjZDc3ZTlmMmFkNWYwNmZmZDI2MDcwMWRkMDZkOTAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxMDQxNjI0OTc4MjIwLW9yN28zYTBsMm9nMmFwajgwbmJmYTJwbDE0amgxcW9yLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiMTA0MTYyNDk3ODIyMC1zbGhpcGdmMDQ5ZmNjNDd0dG11MmY3dHFhYWNlbDN0ZC5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExNDk5MTY4ODU3ODMwMzA1OTkwMyIsImVtYWlsIjoic2FoaWxyMDIxNkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IlNhaGlsIFJhdmFsIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBVFhBSnlwZ0tieXJTRzJCcS1ZdVotbkFDY21aenVSVVpSUTZvemtNNmlKPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlNhaGlsIiwiZmFtaWx5X25hbWUiOiJSYXZhbCIsImxvY2FsZSI6ImVuLUdCIiwiaWF0IjoxNjI2MzM5NjgwLCJleHAiOjE2MjYzNDMyODB9.THio-PVSgh777CwdtPDANGfZcZYOkDMKXvNkBxjLVIdf1JjRwbO6OanNUMC5xelMbupuElLWdxGnnWwtjfnAuZBn3Q0P6ab-NVSC-IV2b9pQypCj_hDfGypghCuHfPXEhF7hMpDjTEdbHtIEQ-ZGje--fPAddgXznx9aLtyB5uqSxyqRsZvWfWR5DN5bRfA1kph07pXQuIGVzRgfRC_GWaeZrGDu_LQZ70DgHCusSt2v41bEPBtafJT3rf7ArDRI5RUMWIWnSYG475nLhuQFUgzLD_L3zcuLHDJ_BIcQ5reo7_u-NJ0CwVyNIb6UAkUauo1KZMp-tEntJ7kVlXod_g\"\n}"
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/user/user/{userId}:
+    get:
+      tags:
+        - user > User
+      summary: getUserById
+      parameters:
+        - name: userId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: >-
+                {"name":"lorem","role":"lorem","googleProvider":"63bd04b2342fde7a69846a5a","phone":100,"profile_picture":"lorem","password":"lorem","id":"65e42168d5da2b2607582603"}
+        '404':
+          description: Not Found
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '{"code":"404","message":"no route found","stack":""}'
+    put:
+      tags:
+        - user > User
+      summary: updateUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: lorem
+                role: lorem
+                googleProvider: 63bd04b2342fde7a69846a5a
+                phone: 100
+                profile_picture: lorem
+                password: lorem
+      parameters:
+        - name: userId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: >-
+                {"name":"lorem","role":"lorem","googleProvider":"63bd04b2342fde7a69846a5a","phone":100,"profile_picture":"lorem","password":"lorem","id":"65e42168d5da2b2607582606"}
+        '404':
+          description: Not Found
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '{"code":"404","message":"no route found","stack":""}'
+    delete:
+      tags:
+        - user > User
+      summary: deleteUserById
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Bearer {{authToken}}
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: cache-control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: userId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '404':
+          description: Not Found
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '{"code":"404","message":"no route found","stack":""}'
+  /v1/user/user/:
+    post:
+      tags:
+        - user > User
+      summary: createUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: lorem
+                role: lorem
+                googleProvider: 63bd04b2342fde7a69846a5a
+                phone: 100
+                profile_picture: lorem
+                password: lorem
+      responses:
+        '200':
+          description: OK
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: >-
+                {"name":"lorem","role":"lorem","googleProvider":"63bd04b2342fde7a69846a5a","phone":100,"profile_picture":"lorem","password":"lorem","id":"65e42168d5da2b2607582604"}
+        '404':
+          description: Not Found
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '{"code":"404","message":"no route found","stack":""}'
+    get:
+      tags:
+        - user > User
+      summary: getUser
+      responses:
+        '200':
+          description: OK
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: >-
+                {"name":"lorem","role":"lorem","googleProvider":"63bd04b2342fde7a69846a5a","phone":100,"profile_picture":"lorem","password":"lorem","id":"65e42168d5da2b2607582605"}
+        '404':
+          description: Not Found
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '{"code":"404","message":"no route found","stack":""}'
+  /v1/user/user/paginated:
+    get:
+      tags:
+        - user > User
+      summary: getUserPaginated
+      responses:
+        '200':
+          description: OK
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: >-
+                {"name":"lorem","role":"lorem","googleProvider":"63bd04b2342fde7a69846a5a","phone":100,"profile_picture":"lorem","password":"lorem","id":"65e42168d5da2b2607582607"}
+        '404':
+          description: Not Found
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '{"code":"404","message":"no route found","stack":""}'
+  /v1/admin/auth/register-device-token:
+    post:
+      tags:
+        - admin > auth
+      summary: register-device-token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                deviceToken: abcd123
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Bearer {{authToken}}
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '1727'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Date:
+              schema:
+                type: string
+                example: Mon, 09 Aug 2021 04:33:47 GMT
+            x-amzn-RequestId:
+              schema:
+                type: string
+                example: ac556d85-b79c-4c76-af92-4939dd0b6b7f
+            referrer-policy:
+              schema:
+                type: string
+                example: no-referrer
+            x-dns-prefetch-control:
+              schema:
+                type: string
+                example: 'off'
+            x-permitted-cross-domain-policies:
+              schema:
+                type: string
+                example: none
+            x-xss-protection:
+              schema:
+                type: integer
+                example: '0'
+            access-control-allow-origin:
+              schema:
+                type: string
+                example: '*'
+            expect-ct:
+              schema:
+                type: string
+                example: max-age=0
+            content-encoding:
+              schema:
+                type: string
+                example: gzip
+            strict-transport-security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            x-frame-options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            content-security-policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri
+                  'self';block-all-mixed-content;font-src 'self' https:
+                  data:;frame-ancestors 'self';img-src 'self' data:;object-src
+                  'none';script-src 'self';script-src-attr 'none';style-src
+                  'self' https: 'unsafe-inline';upgrade-insecure-requests
+            x-download-options:
+              schema:
+                type: string
+                example: noopen
+            x-amz-apigw-id:
+              schema:
+                type: string
+                example: DyB2wGMXoAMFyVg=
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            x-content-type-options:
+              schema:
+                type: string
+                example: nosniff
+            etag:
+              schema:
+                type: string
+                example: W/"1525-KvJsYaaD3NGLDWTF/UjaXp9ITSo"
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+                example: Root=1-6110b02b-34b93ad02edc751736afdca9;Sampled=0
+            X-Cache:
+              schema:
+                type: string
+                example: Miss from cloudfront
+            Via:
+              schema:
+                type: string
+                example: >-
+                  1.1 e01af42be70425366a2b20a3b825d2be.cloudfront.net
+                  (CloudFront)
+            X-Amz-Cf-Pop:
+              schema:
+                type: string
+                example: BOM51-C1
+            X-Amz-Cf-Id:
+              schema:
+                type: string
+                example: 45gl6x0hhqPxXNoDI71_2-6P882xa17K5DrhxvxH-cFwOkRdY-82Cg==
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: |-
+                {
+                    "status": "Success",
+                    "data": {
+                        "name": "brandsWeLove",
+                        "email": "test@yopmail.com",
+                        "codes": [],
+                        "deviceTokens": [
+                            {
+                                "_id": "632841ca8a7d165589aaf9b0",
+                                "deviceToken": "abcd123"
+                            },
+                            {
+                                "_id": "632845e38a7d165589aaf9b7",
+                                "deviceToken": "abcd1234"
+                            }
+                        ],
+                        "id": "632841b649310a5524fed88e"
+                    }
+                }
+        '400':
+          description: Unauthorized
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '246'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Date:
+              schema:
+                type: string
+                example: Mon, 09 Aug 2021 04:34:05 GMT
+            x-amzn-RequestId:
+              schema:
+                type: string
+                example: d3b715f8-fb69-48d8-beec-396b041570c1
+            referrer-policy:
+              schema:
+                type: string
+                example: no-referrer
+            x-dns-prefetch-control:
+              schema:
+                type: string
+                example: 'off'
+            x-permitted-cross-domain-policies:
+              schema:
+                type: string
+                example: none
+            x-xss-protection:
+              schema:
+                type: integer
+                example: '0'
+            access-control-allow-origin:
+              schema:
+                type: string
+                example: '*'
+            expect-ct:
+              schema:
+                type: string
+                example: max-age=0
+            strict-transport-security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            x-frame-options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            x-amzn-Remapped-content-length:
+              schema:
+                type: integer
+                example: '246'
+            content-security-policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri
+                  'self';block-all-mixed-content;font-src 'self' https:
+                  data:;frame-ancestors 'self';img-src 'self' data:;object-src
+                  'none';script-src 'self';script-src-attr 'none';style-src
+                  'self' https: 'unsafe-inline';upgrade-insecure-requests
+            x-download-options:
+              schema:
+                type: string
+                example: noopen
+            x-amz-apigw-id:
+              schema:
+                type: string
+                example: DyB5mETaoAMFyyw=
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            x-content-type-options:
+              schema:
+                type: string
+                example: nosniff
+            etag:
+              schema:
+                type: string
+                example: W/"f6-SZkDl6luoYcOoQxccj9OT4/eKKE"
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+                example: Root=1-6110b03d-7afdba2b6b75c1955314ad62;Sampled=0
+            X-Cache:
+              schema:
+                type: string
+                example: Error from cloudfront
+            Via:
+              schema:
+                type: string
+                example: >-
+                  1.1 e01af42be70425366a2b20a3b825d2be.cloudfront.net
+                  (CloudFront)
+            X-Amz-Cf-Pop:
+              schema:
+                type: string
+                example: BOM51-C1
+            X-Amz-Cf-Id:
+              schema:
+                type: string
+                example: dYNPQK9EpeQSJMvrCkUtb7E-iqU0QIURCOf49KPKuCZEEl9rlZxumw==
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: |-
+                {
+                    "status": "Failure",
+                    "code": 401,
+                    "message": "Please authenticate",
+                    "stack": "Error: Please authenticate\n    at _callee$ (/Users/macos/projects/notificationTest/middlewares/auth.js:6:19)\n    at tryCatch (/Users/macos/projects/notificationTest/middlewares/auth.js:13:2404)\n    at Generator._invoke (/Users/macos/projects/notificationTest/middlewares/auth.js:13:1964)\n    at Generator.next (/Users/macos/projects/notificationTest/middlewares/auth.js:13:3255)\n    at asyncGeneratorStep (/Users/macos/projects/notificationTest/middlewares/auth.js:15:103)\n    at _next (/Users/macos/projects/notificationTest/middlewares/auth.js:17:194)\n    at /Users/macos/projects/notificationTest/middlewares/auth.js:17:364\n    at new Promise (<anonymous>)\n    at /Users/macos/projects/notificationTest/middlewares/auth.js:17:97\n    at /Users/macos/projects/notificationTest/middlewares/auth.js:4:24\n    at allFailed (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:107:18)\n    at attempt (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:180:28)\n    at JwtStrategy.strategy.fail (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:302:9)\n    at JwtStrategy.authenticate (/Users/macos/projects/notificationTest/node_modules/passport-jwt/lib/strategy.js:96:21)\n    at attempt (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:366:16)\n    at authenticate (/Users/macos/projects/notificationTest/node_modules/passport/lib/middleware/authenticate.js:367:7)"
+                }
+  /v1/admin/auth/google:
+    post:
+      tags:
+        - admin > auth
+      summary: Google Login API
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              type: string
+              example: >-
+                "{\n\t\"access_token\":
+                \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjFiZjhhODRkM2VjZDc3ZTlmMmFkNWYwNmZmZDI2MDcwMWRkMDZkOTAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxMDQxNjI0OTc4MjIwLW9yN28zYTBsMm9nMmFwajgwbmJmYTJwbDE0amgxcW9yLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiMTA0MTYyNDk3ODIyMC1zbGhpcGdmMDQ5ZmNjNDd0dG11MmY3dHFhYWNlbDN0ZC5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExNDk5MTY4ODU3ODMwMzA1OTkwMyIsImVtYWlsIjoic2FoaWxyMDIxNkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IlNhaGlsIFJhdmFsIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBVFhBSnlwZ0tieXJTRzJCcS1ZdVotbkFDY21aenVSVVpSUTZvemtNNmlKPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlNhaGlsIiwiZmFtaWx5X25hbWUiOiJSYXZhbCIsImxvY2FsZSI6ImVuLUdCIiwiaWF0IjoxNjI2MzM5NjgwLCJleHAiOjE2MjYzNDMyODB9.THio-PVSgh777CwdtPDANGfZcZYOkDMKXvNkBxjLVIdf1JjRwbO6OanNUMC5xelMbupuElLWdxGnnWwtjfnAuZBn3Q0P6ab-NVSC-IV2b9pQypCj_hDfGypghCuHfPXEhF7hMpDjTEdbHtIEQ-ZGje--fPAddgXznx9aLtyB5uqSxyqRsZvWfWR5DN5bRfA1kph07pXQuIGVzRgfRC_GWaeZrGDu_LQZ70DgHCusSt2v41bEPBtafJT3rf7ArDRI5RUMWIWnSYG475nLhuQFUgzLD_L3zcuLHDJ_BIcQ5reo7_u-NJ0CwVyNIb6UAkUauo1KZMp-tEntJ7kVlXod_g\"\n}"
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/admin/user/{userId}:
+    get:
+      tags:
+        - admin > User
+      summary: getUserById
+      parameters:
+        - name: userId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: >-
+                {"name":"lorem","role":"lorem","googleProvider":"63bd04b2342fde7a69846a5a","phone":100,"profile_picture":"lorem","password":"lorem","id":"65e42168d5da2b2607582603"}
+        '404':
+          description: Not Found
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '{"code":"404","message":"no route found","stack":""}'
+    put:
+      tags:
+        - admin > User
+      summary: updateUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: lorem
+                role: lorem
+                googleProvider: 63bd04b2342fde7a69846a5a
+                phone: 100
+                profile_picture: lorem
+                password: lorem
+      parameters:
+        - name: userId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: >-
+                {"name":"lorem","role":"lorem","googleProvider":"63bd04b2342fde7a69846a5a","phone":100,"profile_picture":"lorem","password":"lorem","id":"65e42168d5da2b2607582606"}
+        '404':
+          description: Not Found
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '{"code":"404","message":"no route found","stack":""}'
+    delete:
+      tags:
+        - admin > User
+      summary: deleteUserById
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Bearer {{authToken}}
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: cache-control
+          in: header
+          schema:
+            type: string
+          example: no-cache
+        - name: userId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '404':
+          description: Not Found
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '{"code":"404","message":"no route found","stack":""}'
+  /v1/admin/user/:
+    post:
+      tags:
+        - admin > User
+      summary: createUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: lorem
+                role: lorem
+                googleProvider: 63bd04b2342fde7a69846a5a
+                phone: 100
+                profile_picture: lorem
+                password: lorem
+      responses:
+        '200':
+          description: OK
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: >-
+                {"name":"lorem","role":"lorem","googleProvider":"63bd04b2342fde7a69846a5a","phone":100,"profile_picture":"lorem","password":"lorem","id":"65e42168d5da2b2607582604"}
+        '404':
+          description: Not Found
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '{"code":"404","message":"no route found","stack":""}'
+    get:
+      tags:
+        - admin > User
+      summary: getUser
+      responses:
+        '200':
+          description: OK
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: >-
+                {"name":"lorem","role":"lorem","googleProvider":"63bd04b2342fde7a69846a5a","phone":100,"profile_picture":"lorem","password":"lorem","id":"65e42168d5da2b2607582605"}
+        '404':
+          description: Not Found
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '{"code":"404","message":"no route found","stack":""}'
+  /v1/admin/user/paginated:
+    get:
+      tags:
+        - admin > User
+      summary: getUserPaginated
+      responses:
+        '200':
+          description: OK
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: >-
+                {"name":"lorem","role":"lorem","googleProvider":"63bd04b2342fde7a69846a5a","phone":100,"profile_picture":"lorem","password":"lorem","id":"65e42168d5da2b2607582607"}
+        '404':
+          description: Not Found
+          headers:
+            Authorization:
+              schema:
+                type: string
+                example: Bearer {{authToken}}
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            cache-control:
+              schema:
+                type: string
+                example: no-cache
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '{"code":"404","message":"no route found","stack":""}'
+  /health:
+    get:
+      tags:
+        - Health
+      summary: Health check
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '15'
+            ETag:
+              schema:
+                type: string
+                example: W/"f-RQ8OySFd+KR+AvtJ7qImjtT0D/0"
+            Date:
+              schema:
+                type: string
+                example: Mon, 20 Feb 2023 12:21:40 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: UP
+  /metrics:
+    get:
+      tags:
+        - Health
+      summary: Metrics check
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '132'
+            ETag:
+              schema:
+                type: string
+                example: W/"84-BLyLMLazZzjsd/9k2NOD4pb9yoI"
+            Date:
+              schema:
+                type: string
+                example: Mon, 20 Feb 2023 12:28:35 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                mem:
+                  rss: 73568256
+                  heapTotal: 91303936
+                  heapUsed: 87017248
+                  external: 19915183
+                  arrayBuffers: 18328199
+                uptime: 170.688891044
+  /info:
+    get:
+      tags:
+        - Health
+      summary: info
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '75'
+            ETag:
+              schema:
+                type: string
+                example: W/"4b-DlEW7PWR4kNRj1OGxGFAuGxS4Ck"
+            Date:
+              schema:
+                type: string
+                example: Mon, 20 Feb 2023 12:28:40 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                build:
+                  name: p1
+                  description: Generated Project
+                  version: 1.0.0
